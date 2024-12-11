@@ -1,0 +1,291 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif, Open Sans;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #222; /* Dark grey background */
+  color: white; /* Semua teks berwarna putih */
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1,
+h2 {
+  color: #f57c00; /* Oren untuk judul */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Header Styles */
+header {
+  background-color: #222; /* Dark grey background */
+  color: white;
+  padding: 1em 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+  display: flex;
+  justify-content: flex-end; /* Memindahkan menu ke sebelah kanan */
+  align-items: center;
+}
+
+header nav ul {
+  display: flex;
+  gap: 15px;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav a.active,
+header nav a:hover {
+  /* text-decoration: underline; */
+  color: #f57c00; /* Oren hover */
+}
+
+/* Home Section */
+.home {
+  display: flex;
+  justify-content: flex-end; /* Gambar dan teks berada di sebelah kanan */
+  align-items: center;
+  margin-top: 2em;
+  padding: 2em 0;
+}
+h1 {
+  text-align: left;
+  color: orange;
+  font-size: 2em;
+  margin-bottom: 0em;
+}
+.home p {
+  font-family: 'Open Sans', sans-serif; /* Font yang mudah dibaca */
+  font-size: 1em; /* Ukuran font sedikit lebih besar */
+  line-height: 1.6; /* Menambahkan jarak antar baris untuk kenyamanan membaca */
+  margin-bottom: 1.5em; /* Memberikan jarak antar paragraf */
+  color: #fff; /* Warna teks putih */
+  max-width: 800px; /* Membatasi lebar agar teks tidak terlalu melebar */
+  margin-left: auto; /* Menjaga agar teks tetap di tengah */
+  margin-right: auto; /* Menjaga agar teks tetap di tengah */
+}
+.home-section {
+  display: flex;
+  justify-content: flex-end; /* Menyelaraskan teks dan gambar di kanan */
+  align-items: center;
+}
+
+.intro-text {
+  margin-right: 15em; /* Memberikan jarak antara teks dan gambar */
+}
+
+.profile-picture {
+  flex-shrink: 0;
+}
+
+.rounded-image {
+  width: 250px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0px 4px 6px rgba(250, 249, 248, 0.5); /* Efek bayangan oren pada gambar */
+}
+
+/* About Section */
+.about {
+  background-color: #333131; /* Dark grey background */
+  padding: 3em 0; /* Menambahkan padding agar lebih lega */
+  margin-top: 2em;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+  color: white; /* Judul oren */
+  text-align: center;
+  font-size: 2em; /* Ukuran font lebih besar untuk judul */
+  margin-bottom: 1em; /* Memberikan jarak bawah dari judul */
+  text-decoration: underline;
+  color: #f57e07; /* Oren hover */
+}
+
+/* Menambah gaya untuk paragraf di About */
+.about p {
+  font-family: 'Open Sans', sans-serif; /* Font yang mudah dibaca */
+  font-size: 1em; /* Ukuran font sedikit lebih besar */
+  line-height: 1.6; /* Menambahkan jarak antar baris untuk kenyamanan membaca */
+  margin-bottom: 1.5em; /* Memberikan jarak antar paragraf */
+  color: #fff; /* Warna teks putih */
+  max-width: 800px; /* Membatasi lebar agar teks tidak terlalu melebar */
+  margin-left: auto; /* Menjaga agar teks tetap di tengah */
+  margin-right: auto; /* Menjaga agar teks tetap di tengah */
+}
+
+/* Styling untuk link dalam About (Jika ada) */
+.about a {
+  color: #f57c00; /* Warna oren untuk link */
+  text-decoration: none;
+}
+
+.about a:hover {
+  text-decoration: underline; /* Menambahkan garis bawah saat hover */
+}
+
+/* Skills Section */
+.skills {
+  margin-top: 2em;
+  padding: 2em 0;
+  background-color: #222; /* Dark grey background */
+  color: white;
+}
+
+.skills h2.orange {
+  text-decoration: underline;
+  color: #f57c00; /* Oren untuk judul */
+  text-align: center;
+}
+
+.skills .skill-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Membuat icon lebih besar dan rapi */
+  gap: 1em;
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.skills .skill-list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.skills .skill-list li.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skills .skill-icon {
+  width: 80px; /* Ukuran icon lebih besar */
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.skills p {
+  color: white;
+}
+
+/* Untuk animasi muncul saat scroll, tambahkan JavaScript */
+
+/* Contact Section */
+.contact {
+  background-color: #333131; /* Dark grey background */
+  color: white;
+  padding: 2em 0;
+  margin-top: 2em;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.contact .contact-list a {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+  text-decoration: none;
+  color: white;
+}
+
+.contact .contact-list img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.contact .cv-download a {
+  background-color: #f57c00; /* Oren background */
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.contact .cv-download a:hover {
+  background-color: #e65100; /* Oren gelap saat hover */
+  color: white;
+}
+
+/* Footer */
+footer {
+  padding: 1em 0;
+  background-color: #222; /* Dark grey background */
+  color: white;
+  margin-top: 2em;
+  border-radius: 10px;
+  position: relative;
+}
+
+footer .container {
+  display: flex;
+  justify-content: center; /* Menu-footer berada di sebelah kanan */
+  align-items: center;
+  width: 100%; /* Pastikan container mengambil lebar penuh */
+}
+
+footer nav ul {
+  display: flex;
+  gap: 15px;
+}
+
+footer nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px; /* Menambahkan padding agar lebih mudah dilihat */
+}
+
+footer nav a:hover {
+  text-decoration: underline;
+  color: #f57c00; /* Oren hover */
+}
+
+/* New Footer Text (Copyright) */
+footer .copyright {
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+/* Menu Items (Home, About Me, etc.) pada Header */
+header nav ul {
+  display: flex;
+  justify-content: flex-end; /* Menggeser menu ke kanan */
+  text-align: center;
+  gap: 20px;
+}
+
+header nav a {
+  color: white;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  color: #f57c00; /* Hover effect oren */
+}
